@@ -65,7 +65,7 @@ export default function Cadastro({ navigation }){
         }}
         />
         <TouchableOpacity onPress={handleCadastro} style={styles.button}>
-            <Text>cadastrar</Text>
+            <Text>Cadastrar</Text>
         </TouchableOpacity>
         <Button title="Voltar para login" onPress={()=> navigation.navigate("Login")}/>
         </View>
@@ -73,9 +73,12 @@ export default function Cadastro({ navigation }){
 }
     const styles = StyleSheet.create({
         container: {
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center'
+            alignContent: 'center',
+            borderRadius: '10px',
+            width: '330px',/* Valor ajustado para um meio-termo */
+            height: '435px', /* Preferi manter a altura maior para evitar cortes */
+            backgroundColor: '#f7f7f7',
+            marginTop: '20px',
         },
         title:{
             fontSize:28,
@@ -89,9 +92,13 @@ export default function Cadastro({ navigation }){
         paddingHorizontal:10
     },
     button:{
-        backgroundColor: 'pink',
+        backgroundColor: 'red',
         padding:10,
-        borderRadius:5
+        borderRadius:20,
+        height: 50,
+        width:'50%',
+        alignItems: 'center',
+        fontSize:58
     }
 });
 
